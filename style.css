@@ -129,7 +129,7 @@ body {
   flex-wrap: wrap;
 }
 
-.btn-primary, .btn-secondary {
+.btn-primary, .btn-secondary, .btn-github {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -137,7 +137,7 @@ body {
   border-radius: 30px;
   font-weight: 600;
   text-decoration: none;
-  transition: transform 0.2s, background-color 0.3s;
+  transition: transform 0.2s, background-color 0.3s, border-color 0.3s;
 }
 
 .btn-primary {
@@ -158,6 +158,19 @@ body {
 }
 
 .btn-secondary:hover {
+  border-color: var(--accent-purple);
+  transform: translateY(-2px);
+}
+
+/* Botón estilizado para GitHub */
+.btn-github {
+  background-color: #24292e;
+  color: #ffffff;
+  border: 1px solid var(--border-color);
+}
+
+.btn-github:hover {
+  background-color: #2f363d;
   border-color: var(--accent-purple);
   transform: translateY(-2px);
 }
@@ -224,6 +237,13 @@ body {
   display: flex;
   align-items: center;
   gap: 0.8rem;
+}
+
+.section-subtitle {
+  color: var(--text-muted);
+  margin-top: -1rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
 }
 
 .section-box {
@@ -322,43 +342,28 @@ body {
   font-size: 0.85rem;
 }
 
-/* 6. Datos e Infografía */
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-}
-
-.stat-card {
-  background-color: var(--card-bg);
+/* 6. Estilos de la Infografía en Imagen */
+.infographic-image-wrapper {
+  background-color: var(--bg-secondary);
+  padding: 1.5rem;
+  border-radius: 16px;
   border: 1px solid var(--border-color);
-  padding: 2rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.infographic-image-wrapper img {
+  width: 100%;
+  height: auto;
   border-radius: 12px;
-  text-align: center;
-  transition: transform 0.3s;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
-.stat-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--accent-purple);
-}
-
-.stat-card i {
-  font-size: 2.5rem;
-  color: var(--accent-purple);
-  margin-bottom: 1rem;
-  display: block;
-}
-
-.stat-card h3 {
-  font-size: 1.1rem;
-  color: #fff;
-  margin-bottom: 0.3rem;
-}
-
-.stat-card p {
-  color: var(--text-muted);
-  font-size: 0.9rem;
+.infographic-image-wrapper img:hover {
+  transform: scale(1.01);
 }
 
 /* 7. Despliegue y Ejecución (Jugar Ahora) */
@@ -425,7 +430,8 @@ footer {
 
 .social-links a {
   color: var(--text-main);
-  font-size: 1.3rem;
+  font-size: 1rem;
+  text-decoration: none;
   transition: color 0.3s;
 }
 
