@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jerry Runner | Portafolio Académico WebGL</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Estilos CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- 1. ENCABEZADO DE NAVEGACIÓN -->
+  <nav class="navbar">
+    <div class="logo">
+      <i class="bi bi-controller"></i> Jerry Runner
+    </div>
+    <ul class="nav-links">
+      <li><a href="#hero">Inicio</a></li>
+      <li><a href="#story">Historia</a></li>
+      <li><a href="#characters">Personaje</a></li>
+      <li><a href="#mechanics">Mecánicas</a></li>
+      <li><a href="#stats">Datos</a></li>
+      <li><a href="#game" class="nav-play-btn">Jugar ahora</a></li>
+    </ul>
+  </nav>
+
+  <!-- 2. SECCIÓN PRINCIPAL (HERO) -->
+  <header id="hero" class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <span class="badge"><i class="bi bi-unity"></i> ENDLESS RUNNER 3D - UNITY</span>
+        <h1>Jerry Runner</h1>
+        <p class="hero-synthesis">
+          Una trepidante carrera infinita donde el ingenio y la velocidad son la única clave para sobrevivir a la persecución implacable de Tom.
+        </p>
+        
+        <div class="hero-cta">
+          <a href="#game" class="btn-primary"><i class="bi bi-play-circle-fill"></i> JUGAR AHORA</a>
+          <a href="#story" class="btn-secondary"><i class="bi bi-book-fill"></i> EXPLORAR HISTORIA</a>
+        </div>
+
+        <!-- Panel de métricas rápidas -->
+        <div class="quick-metrics">
+          <div class="metric-item">
+            <i class="bi bi-trophy-fill"></i>
+            <div>
+              <span class="metric-val">Meta</span>
+              <span class="metric-label">Puntuación Libre</span>
+            </div>
+          </div>
+          <div class="metric-item">
+            <i class="bi bi-heart-fill"></i>
+            <div>
+              <span class="metric-val">1 Vidas</span>
+              <span class="metric-label">Supervivencia</span>
+            </div>
+          </div>
+          <div class="metric-item">
+            <i class="bi bi-keyboard-fill"></i>
+            <div>
+              <span class="metric-val">Teclado</span>
+              <span class="metric-label">Control Ágil</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-image-wrapper">
+        <img src="jerry.jpg" alt="Arte Promocional Jerry Runner" class="hero-promo-img">
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. HISTORIA -->
+  <section id="story" class="container">
+    <div class="section-box">
+      <h2 class="section-title"><i class="bi bi-journal-text"></i> Contexto Narrativo y Arco Argumental</h2>
+      <p>
+        En el universo de ficción de <strong>Jerry Runner</strong>, la apacible rutina del campus universitario se ve interrumpida por un conflicto clásico y dinámico. Tom ha decidido dar caza definitiva a Jerry tras una travesura imperdonable. 
+      </p>
+      <p>
+        El arco argumental sitúa al jugador en una huida contrarreloj a lo largo de pasillos y obstáculos dinámicos. El objetivo principal que motiva el accionar del personaje es mantener la distancia de seguridad con el perseguidor y superar sus propios límites de resistencia esquivando cada obstáculo que se interponga en el camino.
+      </p>
+    </div>
+  </section>
+
+  <!-- 4. PERSONAJE PRINCIPAL -->
+  <section id="characters" class="container">
+    <h2 class="section-title"><i class="bi bi-people-fill"></i> Caracterización de Personajes</h2>
+    
+    <div class="character-grid">
+      <!-- Jerry -->
+      <div class="character-card">
+        <div class="char-img-wrapper">
+          <img src="jerry.jpg" alt="Jerry el ratón" class="char-img">
+        </div>
+        <div class="char-info">
+          <h3>Jerry <span class="role-player">(Protagonista)</span></h3>
+          <p>
+            Astuto y veloz ratón universitario. Posee una gran agilidad para sortear obstáculos imprevistos mediante saltos precisos y movimientos tácticos de evasión.
+          </p>
+        </div>
+      </div>
+
+      <!-- Tom -->
+      <div class="character-card">
+        <div class="char-img-wrapper">
+          <img src="tom.jpg" alt="Tom el gato" class="char-img">
+        </div>
+        <div class="char-info">
+          <h3>Tom <span class="role-enemy">(Antagonista)</span></h3>
+          <p>
+            El persistente felino perseguidor. Su presencia constante en los talones del protagonista eleva la tensión y exige reflejos óptimos por parte del usuario.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. MECÁNICAS DE JUEGO Y CONTROLES -->
+  <section id="mechanics" class="container">
+    <div class="section-box">
+      <h2 class="section-title"><i class="bi bi-joystick"></i> Mecánicas de Interacción y Reglas</h2>
+      <div class="mechanics-grid">
+        <div class="mech-col">
+          <h3><i class="bi bi-gear-fill"></i> Reglas del Sistema</h3>
+          <p>
+            El juego opera bajo la lógica de un <em>Endless Runner</em> 3D. El nivel incrementa progresivamente su dificultad y velocidad. Un impacto directo contra los obstáculos estáticos provoca la finalización inmediata de la partida (Game Over).
+          </p>
+        </div>
+        <div class="mech-col">
+          <h3><i class="bi bi-controller"></i> Esquema de Control</h3>
+          <ul class="control-list">
+            <li><span class="key">Flecha Arriba / Espacio</span> : Salto vertical para librar barreras.</li>
+            <li><span class="key">Flecha Abajo</span> : Agacharse para evitar zonas altas.</li>
+            <li><span class="key">P</span> : Pausar o reanudar la ejecución de la partida.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. DATOS E INFOGRAFÍA -->
+  <section id="stats" class="container">
+    <h2 class="section-title"><i class="bi bi-bar-chart-fill-fill"></i> Datos e Infografía del Proyecto</h2>
+    
+    <div class="stats-grid">
+      <div class="stat-card">
+        <i class="bi bi-cpu-fill"></i>
+        <h3>Motor Gráfico</h3>
+        <p>Unity 3D Engine</p>
+      </div>
+      <div class="stat-card">
+        <i class="bi bi-code-slash"></i>
+        <h3>Plataforma Target</h3>
+        <p>WebGL / Navegador Web</p>
+      </div>
+      <div class="stat-card">
+        <i class="bi bi-shield-shaded"></i>
+        <h3>Dificultad</h3>
+        <p>Progresiva Dinámica</p>
+      </div>
+      <div class="stat-card">
+        <i class="bi bi-award-fill"></i>
+        <h3>Sistema de Puntuación</h3>
+        <p>Distancia Recorrida</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. DESPLIEGUE Y EJECUCIÓN ("JUGAR AHORA") -->
+  <section id="game" class="container">
+    <h2 class="section-title"><i class="bi bi-display-fill"></i> Despliegue y Ejecución WebGL</h2>
+    <p class="game-subtitle">Interactúa directamente con la compilación optimizada para navegadores modernos.</p>
+
+    <div class="game-wrapper">
+      <iframe src="./BuildWebGL/index.html" title="Jerry Runner WebGL Game" allowfullscreen></iframe>
+    </div>
+
+    <div class="tech-requirements">
+      <h3><i class="bi bi-info-circle-fill"></i> Instrucciones Técnicas y Requerimientos</h3>
+      <p>Para una experiencia óptima de ejecución en navegador, se recomienda el uso de Google Chrome, Mozilla Firefox o Microsoft Edge actualizados, con soporte de aceleración gráfica por hardware activada.</p>
+    </div>
+  </section>
+
+  <!-- Pie de página institucional -->
+  <footer>
+    <p>&copy; 2026 Portafolio Académico - Game Development | Universidad</p>
+    <div class="social-links">
+      <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
+      <a href="#" aria-label="Documentación"><i class="bi bi-file-earmark-text-fill"></i></a>
+    </div>
+  </footer>
+
+</body>
+</html>
